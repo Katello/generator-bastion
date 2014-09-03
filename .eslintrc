@@ -1,0 +1,10 @@
+{
+   "env": {
+       "node": true,
+       "mocha": true
+   },
+   "rules": {
+       "quotes": [2, "single", "avoid-escape"],
+	"no-process-exit": 0
+   }
+}
