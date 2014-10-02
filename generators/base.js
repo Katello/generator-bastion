@@ -14,15 +14,19 @@ module.exports = yeoman.generators.Base.extend({
             this.name = this.name.split('/')[1];
         }
     },
-    generateTemplate: function (type) {
-        var filename, templateFilename, date, context, base;
+    generateTemplate: function (type, includeTestFile) {
+        var filename, templateFilename, date, context, base,
+            testTemplateFilename, testBase, testFilename;
 
         base = this.config.get('appRoot') || 'app/assets/javascripts/bastion/';
+        testBase = 'test/';
 
         this.sourceRoot(this.sourceRoot() + '../../../' + type + '/templates');
         templateFilename = type + '.tpl.js';
+        testTemplateFilename = type + '.test.tpl.js';
 
         filename = changeCase.paramCase(this.name);
+        testFilename = testBase + this.module + '/' + filename + '.' + type + '.test.js';
         filename = base + '/' + this.module + '/' + filename + '.' + type + '.js';
 
         date = new Date();
@@ -35,5 +39,9 @@ module.exports = yeoman.generators.Base.extend({
         };
 
         this.template(templateFilename, filename, context);
+
+        if (includeTestFile) {
+            this.template(testTemplateFilename, testFilename, context);
+        }
     }
 });
