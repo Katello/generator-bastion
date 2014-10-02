@@ -16,9 +16,9 @@
 
     angular
         .module('Bastion.<%= module %>')
-        .factory('<%= name %>', <%= name %>)
+        .controller('<%= name %>', <%= name %>)
 
-    <%= name %>.$inject = [];
+    <%= name %>.$inject = ['$scope'];
 
     /**
      * @ngdoc <%= type %>
@@ -27,7 +27,7 @@
      * @description
      *   Enter a description!
      */
-    function <%= name %>() {
+    function <%= name %>($scope) {
 
     };
 

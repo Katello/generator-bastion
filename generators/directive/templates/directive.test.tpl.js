@@ -11,24 +11,24 @@
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.
  **/
 
-(function () {
-    'use strict';
+describe('<%= type %>: , <%= name %>', function () {
+    var scope, element, compile;
 
-    angular
-        .module('Bastion.<%= module %>')
-        .service('<%= name %>', <%= name %>)
+    beforeEach(module('Bastion.<%= module %>'));
 
-    <%= name %>.$inject = [];
+    beforeEach(inject(function (_$compile_, _$rootScope_) {
+        compile = _$compile_;
+        scope = _$rootScope_;
+    }));
 
-    /**
-     * @ngdoc <%= type %>
-     * @name  Bastion.<%= module %>.<%= type %>:<%= name %>
-     *
-     * @description
-     *   Enter a description!
-     */
-    function <%= name %>() {
+    beforeEach(function () {
+        element = angular.element('');
+        compile(element)(scope);
+        scope.$digest();
+    });
 
-    };
+    it('Write some tests', function () {
+        expect(1+1, 3);
+    });
 
-})();
+});
