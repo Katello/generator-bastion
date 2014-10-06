@@ -16,7 +16,7 @@
 
     angular
         .module('Bastion.<%= module %>')
-        .controller('<%= name %>', <%= name %>)
+        .controller('<%= name %>', <%= name %>);
 
     <%= name %>.$inject = ['$scope'];
 
@@ -29,6 +29,6 @@
      */
     function <%= name %>($scope) {
 
-    };
+    }
 
 })();
