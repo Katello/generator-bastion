@@ -16,7 +16,7 @@
 
     angular
         .module('Bastion.<%= module %>')
-        .directive('<%= name %>', <%= name %>)
+        .directive('<%= name %>', <%= name %>);
 
     <%= name %>.$inject = [];
 
@@ -36,6 +36,6 @@
 
             }
         };
-    };
+    }
 
 })();

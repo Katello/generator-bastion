@@ -16,7 +16,7 @@
 
     angular
         .module('Bastion.<%= module %>')
-        .factory('<%= name %>', <%= name %>)
+        .factory('<%= name %>', <%= name %>);
 
     <%= name %>.$inject = [];
 
@@ -29,6 +29,6 @@
      */
     function <%= name %>() {
 
-    };
+    }
 
 })();

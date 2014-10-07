@@ -22,6 +22,6 @@
      *   Enter a description!
      */
     angular
-        .module('Bastion.<%= module %>', [])
+        .module('Bastion.<%= module %>', []);
 
 })();

@@ -50,6 +50,10 @@ module.exports = BastionBase.extend({
         }.bind(this));
     },
     buildComponent: function () {
-        this.generateTemplate(this.type);
+        if (this.type === 'module') {
+            this.generateTemplate(this.type, false);
+        } else {
+            this.generateTemplate(this.type, true);
+        }
     }
 });
