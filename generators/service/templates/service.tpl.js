@@ -14,12 +14,6 @@
 (function () {
     'use strict';
 
-    angular
-        .module('Bastion.<%= module %>')
-        .service('<%= name %>', <%= name %>);
-
-    <%= name %>.$inject = [];
-
     /**
      * @ngdoc <%= type %>
      * @name  Bastion.<%= module %>.<%= type %>:<%= name %>
@@ -30,5 +24,11 @@
     function <%= name %>() {
 
     }
+
+    angular
+        .module('Bastion.<%= module %>')
+        .service('<%= name %>', <%= name %>);
+
+    <%= name %>.$inject = [];
 
 })();

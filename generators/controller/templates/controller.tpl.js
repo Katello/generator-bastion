@@ -14,12 +14,6 @@
 (function () {
     'use strict';
 
-    angular
-        .module('Bastion.<%= module %>')
-        .controller('<%= name %>', <%= name %>);
-
-    <%= name %>.$inject = ['$scope'];
-
     /**
      * @ngdoc <%= type %>
      * @name  Bastion.<%= module %>.<%= type %>:<%= name %>
@@ -30,5 +24,11 @@
     function <%= name %>($scope) {
 
     }
+
+    angular
+        .module('Bastion.<%= module %>')
+        .controller('<%= name %>', <%= name %>);
+
+    <%= name %>.$inject = ['$scope'];
 
 })();
