@@ -14,12 +14,6 @@
 (function () {
     'use strict';
 
-    angular
-        .module('Bastion.<%= module %>')
-        .directive('<%= name %>', <%= name %>);
-
-    <%= name %>.$inject = [];
-
     /**
      * @ngdoc <%= type %>
      * @name  Bastion.<%= module %>.<%= type %>:<%= name %>
@@ -37,5 +31,11 @@
             }
         };
     }
+
+    angular
+        .module('Bastion.<%= module %>')
+        .directive('<%= name %>', <%= name %>);
+
+    <%= name %>.$inject = [];
 
 })();
